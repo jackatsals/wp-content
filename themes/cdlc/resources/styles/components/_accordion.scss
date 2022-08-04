@@ -1,0 +1,19 @@
+.unity-accordion__trigger {
+  border-color: var(--theme-primary-color);
+
+  &[aria-expanded="true"] {
+    background-color: var(--theme-primary-color);
+    color: var(--theme-primary-a11y-color);
+  }
+}
+
+// Dark mode.
+.dark {
+  .unity-accordion__trigger {
+    @apply border-white;
+
+    &[aria-expanded="true"] {
+      @apply bg-neutral-800 text-white;
+    }
+  }
+}

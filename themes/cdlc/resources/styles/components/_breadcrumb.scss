@@ -1,0 +1,21 @@
+.breadcrumb-trail {
+  @apply mb-8 uppercase text-sm;
+}
+
+.breadcrumb-trail a[rel="home"]::before {
+  display: inline-block;
+  margin-right: 0.75rem;
+  background-image: url('../../images/icon-home.svg');
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  width: 16px;
+  height: 16px;
+  content: '';
+}
+
+// Dark mode.
+.dark {
+  .breadcrumb-trail a[rel="home"]::before {
+    background-image: url('../../images/icon-home-invert.svg');
+  }
+}

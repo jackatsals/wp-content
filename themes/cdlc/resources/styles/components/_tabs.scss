@@ -1,0 +1,28 @@
+.unity-tabs .unity-tabs__tab {
+  border-color: var(--theme-primary-color);
+}
+
+.unity-tabs .unity-tabs__tab[aria-selected="true"] {
+  border-color: var(--theme-primary-color);
+  color: var(--theme-primary-a11y-color);
+  background-color: var(--theme-primary-color);
+}
+
+.unity-tabs.unity-tabs--horizontal > [role="tablist"] {
+  border-bottom-color: var(--theme-primary-color);
+}
+
+// Dark mode.
+.dark {
+  .unity-tabs .unity-tabs__tab {
+    @apply border-white;
+
+    &[aria-selected="true"] {
+      @apply bg-neutral-800;
+    }
+  }
+
+  .unity-tabs.unity-tabs--horizontal > [role="tablist"] {
+    @apply border-b-white;
+  }
+}

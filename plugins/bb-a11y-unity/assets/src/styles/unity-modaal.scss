@@ -1,0 +1,31 @@
+.unity-modaal {
+  &__button {
+    display: inline-block;
+    width: auto;
+    background: rgb(var(--red), var(--green), var(--blue));
+    color: rgb(var(--accessible-color), var(--accessible-color), var(--accessible-color));
+    appearance: none;
+    -webkit-appearance: none;
+    border: 0;
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.2s linear;
+
+    > i {
+      margin-left: 0.5rem;
+    }
+
+    &:hover,
+    &:focus {
+      color: rgb(var(--interact-accessible-color), var(--interact-accessible-color), var(--interact-accessible-color));
+      background: rgb(var(--interact-red),var(--interact-green), var(--interact-blue));
+    }
+
+    &:focus {
+      outline-offset: -6px;
+      outline: 2px dotted currentColor;
+    }
+  }
+}

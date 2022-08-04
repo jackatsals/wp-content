@@ -1,0 +1,92 @@
+
+.btn,
+.wp-block-button__link,
+.unity-modaal__button,
+.gform_button {
+  @apply cursor-pointer inline-block font-normal px-6 py-3 text-lg no-underline duration-300 rounded-none dark:bg-black dark:text-white;
+
+  border: 1px solid var(--theme-secondary-color);
+  background-color: var(--theme-secondary-color);
+  color: var(--theme-secondary-a11y-color);
+  transition: all 0.3s ease-in-out;
+  outline: 1px solid transparent;
+  outline-offset: -5px;
+
+  &:hover,
+  &:focus {
+    outline-color: currentcolor;
+    border-color: var(--theme-primary-color);
+    background-color: var(--theme-primary-color);
+    color: var(--theme-primary-a11y-color);
+  }
+}
+
+.btn--sm {
+  @apply px-4 py-2;
+}
+
+.btn-menu-toggle {
+  .line {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 6px;
+  }
+
+  .line--top {
+    stroke-dasharray: 60 207;
+  }
+
+  .line--middle {
+    stroke-dasharray: 60 60;
+  }
+
+  .line--bottom {
+    stroke-dasharray: 60 207;
+  }
+
+  &[aria-expanded="true"] {
+    .line--top {
+      stroke-dasharray: 90 207;
+      stroke-dashoffset: -134;
+    }
+
+    .line--middle {
+      stroke-dasharray: 1 60;
+      stroke-dashoffset: -30;
+    }
+
+    .line--bottom {
+      stroke-dasharray: 90 207;
+      stroke-dashoffset: -134;
+    }
+  }
+}
+
+.btn-skippy {
+  position: absolute;
+
+  &:focus {
+    clip: auto;
+    clip-path: none;
+    display: block;
+    height: auto;
+    left: 5px;
+    top: 5px;
+    width: auto;
+    z-index: 1000;
+  }
+}
+
+.dark {
+  .btn,
+  .wp-block-button__link {
+    @apply border-white;
+  }
+
+  .btn:hover,
+  .btn:focus,
+  .wp-block-button__link:hover,
+  .wp-block-button__link:focus {
+    @apply text-white bg-black;
+  }
+}

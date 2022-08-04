@@ -1,0 +1,179 @@
+.single {
+  .post {
+    h1 {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      margin-top: .5em;
+      margin-bottom: .2em;
+    }
+
+    figure {
+      margin-bottom: 1em;
+    }
+
+    .wp-block-image figcaption {
+      border-left: 0.25rem solid var(--theme-primary-color);
+
+      @media(min-width: 700px) {
+        width: 50%;
+      }
+    }
+  }
+}
+
+.entry {
+  .entry-summary {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .entry-title {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.featured-post {
+  .entry-title {
+    padding: 0;
+  }
+
+  .featured {
+    font-size: .8em;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: '\2022';
+      color: var(--theme-primary-color);
+      font-size: 3em;
+      padding-right: 5px;
+    }
+  }
+}
+
+.post-card {
+  .entry {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.entry {
+  &:hover,
+  &:focus-within {
+    .entry-thumbnail-wrapper::after {
+      opacity: 0;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+.meta-wrapper {
+  display: flex;
+  font-size: .6em;
+  border-top: 2.5px solid #ccc;
+  padding-top: 5px;
+  line-height: 1.2em;
+  margin-top: 1rem;
+  justify-self: flex-end;
+
+  div {
+    display: flex;
+    padding-right: 1rem;
+
+    .svg-icon-meta {
+      @apply fill-current;
+
+      height: 13px;
+      width: 13px;
+      margin-right: 5px;
+    }
+
+    .byline.author.vcard {
+      margin-top: 0;
+    }
+  }
+}
+
+.entry-thumbnail-wrapper {
+  position: relative;
+  height: 0;
+  padding-bottom: 65%;
+  overflow: hidden;
+  margin-bottom: 20px;
+
+  &::after,
+  &::before {
+    background-color: var(--theme-primary-color);
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    pointer-events: none;
+  }
+
+  &::before {
+    z-index: 0;
+  }
+
+  &::after {
+    z-index: 5;
+    transition: 0.3s opacity ease-in-out;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--theme-primary-color);
+    color: var(--theme-primary-a11y-color);
+    z-index: 10;
+    padding: 5px 10px;
+    letter-spacing: .05em;
+    font-size: .65em;
+  }
+}
+
+// Dark mode.
+.dark {
+  .featured-post .featured,
+  .featured-post .featured::before {
+    color: currentColor;
+  }
+
+  .entry-thumbnail-wrapper {
+    &::after,
+    &::before {
+      @apply bg-neutral-600;
+    }
+
+    span {
+      @apply bg-black;
+    }
+  }
+}

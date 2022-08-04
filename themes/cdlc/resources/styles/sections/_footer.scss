@@ -1,0 +1,72 @@
+.content-info {
+  background-color: var(--theme-primary-color);
+  color: var(--theme-primary-a11y-color);
+}
+
+.content-info__main {
+  padding: 2rem 0;
+
+  p {
+    margin: 0;
+  }
+}
+
+.content-info__copyright {
+  position: relative;
+  padding: 1rem 0;
+}
+
+.banner .custom-logo,
+.content-info .custom-logo {
+  @apply dark:invert dark:brightness-0;
+}
+
+body.dark-primary-color .content-info .custom-logo {
+  @apply invert brightness-0;
+}
+
+.content-info .inherit-stroke {
+  stroke: currentcolor;
+}
+
+.content-info .menu,
+.content-info .nav {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.content-info .nav {
+  justify-content: center;
+}
+
+@media screen and (min-width: 992px) {
+  .content-info__copyright .nav {
+    justify-content: flex-end;
+  }
+}
+
+.content-info .menu {
+  margin-top: 1rem;
+}
+
+.content-info .menu li {
+  margin-right: 2rem;
+}
+
+.content-info .nav li {
+  margin: 0 1rem;
+}
+
+// Dark mode.
+.dark {
+  .content-info__copyright::after {
+    @apply bg-neutral-800;
+  }
+
+  .content-info__main .col {
+    border-color: var(--theme-secondary-color);
+  }
+}

@@ -1,0 +1,7 @@
+.opening-hours {
+  @apply text-base md:text-sm;
+
+  .day-name {
+    @apply text-left align-baseline pr-2;
+  }
+}

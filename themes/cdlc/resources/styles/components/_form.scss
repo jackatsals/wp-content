@@ -1,0 +1,153 @@
+legend {
+  @apply text-base font-bold mb-4;
+}
+
+label {
+  @apply text-sm;
+}
+
+select {
+  @apply p-2 h-10 rounded-none appearance-none border-current bg-white dark:bg-black dark:text-white;
+
+  border: 1px solid;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%2000000%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat, repeat;
+  background-position: right 1rem top 50%, 0 0;
+  background-size: 0.65em auto, 100%;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+  @apply p-2 h-10 rounded-none border-current bg-white dark:bg-black dark:text-white;
+
+  border: 1px solid;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  accent-color: var(--theme-primary-color);
+  width: 20px;
+  height: 20px;
+  margin-right: 0.25rem;
+}
+
+.gform_wrapper.gravity-theme input[type="submit"] {
+  border: 0;
+}
+
+.gform_confirmation_wrapper {
+  @apply p-4 text-green-800 bg-green-100;
+}
+
+.gform_wrapper .gform_validation_errors > h2,
+.gform_wrapper .gform_validation_errors > ol a,
+.gform_wrapper .gfield_required,
+.gform_wrapper .gfield_error .gfield_repeater_cell label,
+.gform_wrapper .gfield_error label,
+.gform_wrapper .gfield_error legend,
+.gform_wrapper .gfield_validation_message,
+.gform_wrapper .validation_message,
+.gform_wrapper [aria-invalid="true"] + label,
+.gform_wrapper label+[aria-invalid="true"] {
+  @apply text-red-800;
+}
+
+.gform_wrapper .gform_validation_errors > ol a {
+  @apply underline;
+}
+
+.gform_wrapper {
+  &.gravity-theme {
+    .ginput_complex label {
+      margin-bottom: 0;
+      font-weight: 500;
+      font-size: 0.75rem;
+    }
+
+    .gfield_label {
+      margin-bottom: 0;
+      font-weight: 500;
+      font-size: 0.875rem;
+    }
+  }
+}
+
+.gform_wrapper .gfield_validation_message, .gform_wrapper .validation_message {
+  padding: 0.5rem;
+}
+
+.gform_wrapper.gravity-theme .gfield_description,
+.gform_wrapper.gravity-theme .instruction {
+  padding-top: 0.5rem;
+  font-size: 0.75rem;
+}
+
+// Search
+.search-form {
+  @apply md:w-[500px];
+
+  legend {
+    @apply text-sm font-normal;
+
+    margin-bottom: 0;
+  }
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    accent-color: var(--theme-primary-a11y-color);
+  }
+
+  button {
+    @apply self-end;
+
+    &:hover,
+    &:focus {
+      outline-offset: 0;
+    }
+  }
+}
+
+// Dark mode.
+.dark {
+  select {
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+  }
+
+  .gform_wrapper .gfield_required,
+  .gform_wrapper .gfield_error .gfield_repeater_cell label,
+  .gform_wrapper .gfield_error label,
+  .gform_wrapper .gfield_error legend,
+  .gform_wrapper .gfield_validation_message,
+  .gform_wrapper .validation_message,
+  .gform_wrapper [aria-invalid="true"] + label,
+  .gform_wrapper label+[aria-invalid="true"] {
+    @apply text-red-300;
+  }
+
+  .gform_wrapper .validation_message,
+  .gform_wrapper .gfield_validation_message,
+  .gform_wrapper .gform_validation_errors > h2,
+  .gform_wrapper .gform_validation_errors > ol a {
+    @apply text-red-800;
+  }
+
+  .gform_wrapper .gfield_validation_message,
+  .gform_wrapper .validation_message,
+  .gform_wrapper .gfield_error [aria-invalid="true"] {
+    @apply border-red-300;
+  }
+
+  .gform_wrapper.gravity-theme input[type="submit"] {
+    border: 1px solid;
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+    }
+  }
+}

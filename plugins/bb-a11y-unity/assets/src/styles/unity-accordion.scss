@@ -1,0 +1,74 @@
+.unity-accordion {
+  margin: 0;
+  padding: 0;
+
+  &__trigger {
+    border: 2px solid;
+    border-radius: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    color: currentColor;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    padding: 1rem;
+    position: relative;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.2s linear;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+
+    &:focus {
+      outline-offset: -6px;
+      outline: 2px dotted currentColor;
+    }
+
+    svg {
+      display: inline-block;
+      margin-left: 1rem;
+      width: 16px;
+      height: 16px;
+      pointer-events: none;
+
+      rect {
+        fill: currentColor;
+        transition: fill 0.2s linear;
+      }
+    }
+
+    &[aria-expanded="true"] {
+      .vert {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    display: block;
+    pointer-events: none;
+    border: transparent 2px solid;
+    border-radius: 5px;
+    padding: 0.25em;
+    outline: none;
+  }
+
+  &__panel {
+    margin: 0;
+    padding: 1rem;
+    font-size: 1rem;
+
+    &[hidden] {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+.cdlc-layout-card {
+  display: grid;
+  gap: 20px;
+  height: 100%;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+
+    &.vertical {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .entry-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  .button-container {
+    a.btn {
+      width: 100%;
+      margin-top: 1em;
+    }
+  }
+}

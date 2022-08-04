@@ -1,0 +1,1 @@
+document.querySelectorAll(".cdlc-layout-card").forEach((function(c,l,a){c.offsetWidth<400&&c.classList.add("small-card")}));

@@ -1,0 +1,32 @@
+{
+  "name": "sage",
+  "private": true,
+  "browserslist": [
+    "extends @wordpress/browserslist-config"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "dev": "bud dev",
+    "build": "bud build",
+    "lint": "npm run lint:js && npm run lint:css",
+    "lint:js": "eslint resources/scripts",
+    "lint:css": "stylelint \"resources/**/*.{css,scss,vue}\"",
+    "test": "npm run lint",
+    "translate": "npm run translate:pot && npm run translate:js",
+    "translate:pot": "wp i18n make-pot . ./resources/lang/sage.pot --ignore-domain --include=\"app,resources\"",
+    "translate:js": "wp i18n make-json ./resources/lang --pretty-print"
+  },
+  "devDependencies": {
+    "@roots/bud": "5.8.7",
+    "@roots/bud-postcss": "5.8.7",
+    "@roots/bud-sass": "5.8.7",
+    "@roots/bud-tailwindcss": "5.8.7",
+    "@roots/sage": "5.8.7"
+  },
+  "dependencies": {
+    "focus-visible": "^5.2.0",
+    "js-cookie": "^3.0.1"
+  }
+}

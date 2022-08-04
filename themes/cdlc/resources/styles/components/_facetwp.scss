@@ -1,0 +1,8 @@
+.blog .facetwp-facet {
+  @apply mb-4 md:mb-0;
+}
+
+.facetwp-type-dropdown,
+.facetwp-type-search .facetwp-input-wrap {
+  @apply flex flex-col;
+}

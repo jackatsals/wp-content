@@ -1,0 +1,79 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-bold mt-8;
+}
+
+h1 {
+  @apply text-6xl leading-tight;
+}
+
+h2 {
+  @apply text-5xl leading-tight;
+}
+
+h3 {
+  @apply text-4xl leading-tight;
+}
+
+h4 {
+  @apply text-3xl leading-tight;
+}
+
+h5 {
+  @apply text-2xl leading-tight;
+}
+
+h6 {
+  @apply text-xl leading-tight;
+}
+
+p {
+  @apply mt-5 mb-5;
+}
+
+ul {
+  @apply list-disc;
+}
+
+ol {
+  @apply list-decimal;
+}
+
+ul,
+ol {
+  @apply list-disc pl-6 mt-3 mb-3;
+}
+
+blockquote,
+.unity-blockquote {
+  @apply not-italic font-normal text-2xl;
+
+  border-left-color: var(--theme-secondary-color);
+
+  p {
+    @apply m-0;
+  }
+
+  cite {
+    @apply text-base font-normal not-italic;
+  }
+}
+
+a {
+  @apply underline;
+}
+
+a:hover,
+a:focus {
+  @apply decoration-2 decoration-current;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-gap: 0.5rem 1.5rem;
+}

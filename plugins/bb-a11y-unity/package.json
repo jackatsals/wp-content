@@ -1,0 +1,30 @@
+{
+  "name": "bb-a11y-unity",
+  "engines": {
+    "node": ">= 16.0.0"
+  },
+  "scripts": {
+    "dev": "mix",
+    "watch": "mix watch",
+    "watch-poll": "mix watch -- --watch-options-poll=1000",
+    "hot": "mix watch --hot",
+    "production": "mix --production"
+  },
+  "keywords": [
+    "wordpress",
+    "webpack",
+    "javascript"
+  ],
+  "devDependencies": {
+    "laravel-mix": "^6.0.31",
+    "node-sass": "^7.0.0",
+    "sass": "^1.42.1",
+    "sass-loader": "^12.1.0"
+  },
+  "dependencies": {
+    "@accessible360/accessible-slick": "^1.0.1",
+    "countup.js": "^2.0.8",
+    "modaal": "^0.4.4",
+    "plyr": "^3.6.9"
+  }
+}

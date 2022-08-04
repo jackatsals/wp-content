@@ -1,0 +1,35 @@
+.cdlc-splash.full-width {
+  grid-template-columns: 1fr;
+  padding-bottom: 0;
+}
+
+.cdlc-splash.full-width:after {
+  height: 0;
+}
+
+.cdlc-splash.full-width .cdlc-splash__search-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 992px) {
+  .cdlc-splash.full-width .cdlc-splash__search-container .cdlc-splash__search {
+    top: auto;
+    margin-top: 0;
+  }
+}
+
+.cdlc-splash.full-width select, .cdlc-splash.full-width input {
+  width: 100%;
+}
+
+.cdlc-splash.full-width label {
+  font-size: 0.875rem;
+}
+

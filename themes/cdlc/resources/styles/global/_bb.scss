@@ -1,0 +1,16 @@
+@media screen and (max-width: 767px) {
+  .fl-col-group .fl-col-small {
+    max-width: 100%;
+  }
+}
+
+.fl-col-group-equal-height {
+  .fl-col-content,
+  .fl-col-content > [class*=" fl-module-cdlc-"] {
+    height: 100%;
+  }
+
+  .fl-module-content {
+    height: calc(100% - 40px);
+  }
+}

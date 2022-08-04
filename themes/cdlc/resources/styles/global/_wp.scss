@@ -1,0 +1,65 @@
+.custom-logo-link {
+  display: inline-block;
+}
+
+.wp-block-image img {
+  margin-bottom: 0.5rem;
+}
+
+.wp-block-image figcaption {
+  border-left: 0.25rem solid var(--theme-secondary-color);
+  line-height: 1.4;
+  padding-left: 1rem;
+  color: currentColor;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.alignleft {
+  float: left;
+  margin: 0 1em 1em 0;
+}
+
+.alignright {
+  float: right;
+  margin: 0 0 1em 1em;
+}
+
+@media screen and (min-width: 992px) {
+  .alignwide {
+    margin-left: -80px;
+    margin-right: -80px;
+  }
+
+  .alignright, .alignleft {
+    max-width: 50%;
+  }
+}
+
+.alignfull {
+  margin-left: calc(-100vw / 2 + 100% / 2);
+  margin-right: calc(-100vw / 2 + 100% / 2);
+  max-width: 100vw;
+  width: 100vw;
+}
+
+.alignfull img {
+  width: 100vw;
+}
+
+.entry-content-asset {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+.entry-content-asset iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,40 @@
+@import '_variables';
+
+.cdlc-book-carousel {
+  position: relative;
+  background-color: $color-white;
+  padding: 2rem;
+
+  article {
+    position: relative;
+  }
+
+  article h3 {
+    display: block;
+    line-height: 1.5;
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  article a {
+    text-decoration: none;
+  }
+
+  article a::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    z-index: 10;
+  }
+}
+
+// Dark mode.
+.dark {
+  .cdlc-book-carousel {
+    background-color: $color-neutral-800;
+    color: $color-white;
+  }
+}

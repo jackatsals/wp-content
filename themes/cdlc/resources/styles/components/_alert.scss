@@ -1,0 +1,23 @@
+.alert {
+  position: relative;
+}
+
+@media screen and (min-width: 992px) {
+  .alert > * {
+    clip-path: polygon(28px -1px, calc(100% + 1px) 0, calc(100% - 28px) 100%, 0 calc(100% + 1px));
+  }
+}
+
+.alert::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: repeating-linear-gradient(-65deg, transparent, transparent 20px, currentcolor 20px, currentcolor 40px);
+  content: '';
+}
+
+.dark .alert::after {
+  background-image: repeating-linear-gradient(-65deg, black, black 20px, currentcolor 20px, currentcolor 40px);
+}

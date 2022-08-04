@@ -1,0 +1,31 @@
+.unity-posts {
+  &__entry {
+    position: relative;
+
+    figure {
+      padding: 0;
+      margin: 0;
+      line-height: 0;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    a::after {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      content: '';
+    }
+  }
+
+  &__entry-meta {
+    > span {
+      display: block;
+    }
+  }
+}

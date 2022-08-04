@@ -1,0 +1,25 @@
+// This will hide the focus indicator if the element receives focus via the mouse, but it will still show up on keyboard focus.
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+// Optionally: Define a strong focus indicator for keyboard focus. If you choose to skip this step then the browser's default focus indicator will be displayed instead.
+.js-focus-visible .focus-visible {
+  outline: 2px dotted currentcolor;
+  outline-offset: 2px;
+}
+
+// Used for accessible link wrapper. Requires a relative parent.
+.a11y-link-wrap::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  z-index: 10;
+}
+
+[hidden] {
+  display: none;
+}

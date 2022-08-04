@@ -1,0 +1,28 @@
+.cdlc-search-bar {
+  background: var(--theme-primary-color);
+  color: #fff;
+  padding: 20px;
+}
+
+.cdlc-search-bar h2 {
+  font-size: 1.5rem;
+}
+
+.cdlc-search-bar .cdlc-splash__search-form {
+  margin-top: 1em;
+}
+
+.cdlc-search-bar .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+}
+
+.cdlc-search-bar .grid select, .cdlc-search-bar .grid input {
+  width: 100%;
+}
+
+.cdlc-search-bar .grid label {
+  font-size: 0.875rem;
+}
+
