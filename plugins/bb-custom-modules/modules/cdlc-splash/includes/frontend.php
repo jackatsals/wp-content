@@ -16,7 +16,7 @@ $query = $module->queryPosts($settings->post_type);
         </article>
         <div class="cdlc-splash__background">
             <?php if (!empty($settings->background_image)) : ?>
-                <img src="<?php echo wp_get_attachment_url($settings->background_image); ?>" alt="" />
+                <?php echo wp_get_attachment_image($settings->background_image, 'large', false); ?>
             <?php endif; ?>
         </div>
         <?php if (!empty($settings->quick_links)) : ?>

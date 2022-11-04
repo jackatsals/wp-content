@@ -2,17 +2,15 @@
   <div class="content-info__main">
     <div class="container grid md:grid-cols-12 gap-12 lg:gap-5 text-base">
       <div class="col md:col-span-12 lg:col-span-4 lg:border-r-[1px] border-current">
-        <div class="max-w-[16rem]">
-          @if (has_custom_logo())
-            <div class="mb-12">{!! get_custom_logo() !!}</div>
-          @endif
-          <div>
-            {!! wp_nav_menu([
-              'theme_location' => 'social_links',
-              'container'      => 'nav',
-              'depth'          => 1,
-            ]) !!}
-          </div>
+        @if (has_custom_logo())
+          <div class="max-w-[16rem] mb-12">{!! get_custom_logo() !!}</div>
+        @endif
+        <div class="max-w-[24rem]">
+          {!! wp_nav_menu([
+            'theme_location' => 'social_links',
+            'container'      => 'nav',
+            'depth'          => 1,
+          ]) !!}
         </div>
       </div>
       <div class="col md:col-span-6 lg:col-span-4 md:border-r-[1px] border-current">

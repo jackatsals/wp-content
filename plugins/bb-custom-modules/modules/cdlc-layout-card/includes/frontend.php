@@ -3,7 +3,7 @@
     if(!empty($settings->direction) && $settings->direction == 'vertical') echo (' vertical') ?>">
     <?php if (!empty( $settings->image )) : ?>
       <div class="img-container">
-        <img src="<?php echo wp_get_attachment_url($settings->image); ?>" alt="" />
+        <img src="<?php echo esc_url($settings->image_src); ?>" alt="<?php echo get_post_meta($settings->image, '_wp_attachment_image_alt', true); ?>" />
       </div>
     <?php endif ?>
   <div class="text-container">

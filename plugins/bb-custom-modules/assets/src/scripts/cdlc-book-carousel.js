@@ -1,4 +1,5 @@
 import '@accessible360/accessible-slick';
+import prefersReducedMotion from './util/prefersReducedMotion';
 
 const slickIcons = {
   prev: '<button class="slick-prev" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 44"><path d="M27 22L5 44l-2.1-2.1L22.8 22 2.9 2.1 5 0l22 22z"></path></svg><span class="slick-sr-only">Previous</span></button>',
@@ -38,6 +39,7 @@ if (carousels) {
           },
         },
       ],
+      speed: prefersReducedMotion() ? 0 : 750,
     });
   });
 }

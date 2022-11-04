@@ -172,6 +172,20 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
         'sanitize_callback' => 'sanitize_hex_color',
     ]));
 
+    $wp_customize->add_setting('theme_logo_ignore_dark_mode', [
+        'default'   => '',
+        'type'      => 'theme_mod',
+        'transport' => 'refresh',
+    ]);
+
+    $wp_customize->add_control('theme_logo_ignore_dark_mode', [
+        'label'       => __('Ignore logo adjust on dark backgrounds?', 'sage'),
+        'description' => __('The dark mode feature will automatically covert your logo on dark backgrounds (and dark mode) to white (monochrome). Please check this box to opt out of this behavior.', 'sage'),
+        'section'     => 'theme_settings',
+        'settings'    => 'theme_logo_ignore_dark_mode',
+        'type'        => 'checkbox',
+    ]);
+
     /**
      * Blog Settings
      */

@@ -39,7 +39,9 @@ add_action('wp_enqueue_scripts', function () {
      */
     if ($theme_primary_a11y_color === '#FFFFFF') {
         add_filter('body_class', function ($classes) {
-            $classes[] = 'dark-primary-color';
+            if (!get_theme_mod('theme_logo_ignore_dark_mode')) {
+                $classes[] = 'dark-primary-color';
+            }
 
             return $classes;
         }, 10, 1);

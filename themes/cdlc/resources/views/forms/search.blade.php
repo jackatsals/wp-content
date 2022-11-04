@@ -2,12 +2,12 @@
   <fieldset class="flex items-center md:col-span-5">
     <legend>{{ __('Choose one', 'sage') }}</legend>
     <div class="flex mr-8">
-      <input type="radio" id="searchTypeWebsite" name="type" value="website" checked />
-      <label for="searchTypeWebsite">{{ __('Website', 'sage') }}</label>
+      <input type="radio" id="searchTypeCatalog" name="type" value="catalog" checked />
+      <label for="searchTypeCatalog">{{ __('Catalog', 'sage') }}</label>
     </div>
     <div class="flex">
-      <input type="radio" id="searchTypeCatalog" name="type" value="catalog" />
-      <label for="searchTypeCatalog">{{ __('Catalog', 'sage') }}</label>
+      <input type="radio" id="searchTypeWebsite" name="type" value="website" />
+      <label for="searchTypeWebsite">{{ __('Website', 'sage') }}</label>
     </div>
   </fieldset>
   <div class="flex md:col-span-7 mt-4 md:mt-0">
