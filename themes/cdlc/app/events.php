@@ -65,20 +65,28 @@ add_filter('tribe_events_single_event_after_the_content', function () {
  * Custom prev month link.
  */
 function get_events_prev_month_link() {
-    $url = tribe_get_previous_month_link();
-    $text = tribe_get_previous_month_text();
-    $date = \Tribe__Events__Main::instance()->previousMonth(tribe_get_month_view_date());
+   // $url = tribe_get_previous_month_link();
+    //$text = tribe_get_previous_month_text();
+    $text = date("F", strtotime(tribe_get_month_view_date('Y-m')." -1 month"));
+    //$date = \Tribe__Events__Main::instance()->previousMonth(tribe_get_month_view_date());
+    $date = date('Y-m', strtotime(tribe_get_month_view_date('Y-m')." -1 month"));
 
-    return '<div class="text-center"><a class="btn" data-month="' . $date . '" href="' . $url . '" rel="prev"><span aria-hidden="true">&laquo;</span> Events in ' . $text . '</a></div>';
+
+    //return '<div class="text-center"><a class="btn" data-month="' . $date . '" href="' . $url . '" rel="prev"><span aria-hidden="true">&laquo;</span> Events in ' . $text . '</a></div>';
+    return '<div class="text-center"><a class="btn" data-month="' . $date . '" href=https://jacouncil.sals.edu/upcoming_meetings/month/' . $date . '/" rel="prev"><span aria-hidden="true">&laquo;</span> Events in ' . $text . '</a></div>';
 }
 
 /**
  * Custom next month link.
  */
 function get_events_next_month_link() {
-    $url = tribe_get_next_month_link();
-    $text = tribe_get_next_month_text();
-    $date = \Tribe__Events__Main::instance()->nextMonth(tribe_get_month_view_date());
+    //$url = tribe_get_next_month_link();
+    //$text = tribe_get_next_month_text();
+    $text = date("F", strtotime(tribe_get_month_view_date('Y-m')." +1 month"));
+    //$date = \Tribe__Events__Main::instance()->nextMonth(tribe_get_month_view_date());
+    $date = date('Y-m', strtotime(tribe_get_month_view_date('Y-m')." +1 month"));
 
-    return '<div class="text-center"><a class="btn" data-month="' . $date . '" href="' . $url . '" rel="next">Events in ' . $text . ' <span aria-hidden="true">&raquo;</span></a></div>';
+    //return '<div class="text-center"><a class="btn" data-month="' . $date . '" href="' . $url . '" rel="next">Events in ' . $text . ' <span aria-hidden="true">&raquo;</span></a></div>';
+    return '<div class="text-center"><a class="btn" data-month="' . $date . '" href=https://jacouncil.sals.edu/upcoming_meetings/month/' . $date . '/" rel="next"><span aria-hidden="true">Events in ' . $text . ' &raquo;
+</span></a></div>';}
 }
